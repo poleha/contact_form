@@ -11,11 +11,11 @@ class ContactFormModel(ModelForm):
             self.fields['email'].initial = user.email
             self.instance.user = user
 
-        self.fields['name'].widget = TextInput(attrs={'placeholder': 'Ваше имя', 'class': 'form-control'})
+        self.fields['name'].widget = TextInput(attrs={'placeholder': 'Ваше имя', 'class': 'form-control', 'id': 'id_contact_form_name'})
 
-        self.fields['email'].widget = TextInput(attrs={'placeholder': 'Email', 'class': 'form-control'})
+        self.fields['email'].widget = TextInput(attrs={'placeholder': 'Email', 'class': 'form-control', 'id': 'id_contact_form_email'})
 
-        self.fields['body'].widget = Textarea(attrs={'placeholder': 'Сообщение', 'class': 'form-control'})
+        self.fields['body'].widget = Textarea(attrs={'placeholder': 'Сообщение', 'class': 'form-control', 'id': 'id_contact_form_body'})
 
 
 
